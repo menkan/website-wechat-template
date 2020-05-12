@@ -2,7 +2,6 @@
 $white: #FFFFFF;
 $default-text: #555555;
 $shadow: #999999;
-
 $mainColor: #1AAD19;
 
 
@@ -115,7 +114,8 @@ $side-width: 240px;
   min-width: 800px;
   margin: 0 auto;
   background: #EEEEEE;
-  // overflow: hidden;
+
+  // sider bar
   .side-box {
     position: relative;
     width: $side-width;
@@ -123,6 +123,8 @@ $side-width: 240px;
     height: 100%;
     background-color: green;
   }
+
+  // chat room context
   .chat-panel {
     height: 100vh;
     margin-left: $side-width;
@@ -142,8 +144,79 @@ $side-width: 240px;
     }
     &__context {
       flex: 1;
-      // 系统消息
-      .system-message {}
+      padding: 0 20px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      .message,
+      .system-message {
+        padding: 10px 0;
+      }
+      // system message
+      .system-message {
+        font-size: 12px;
+        text-align: center;
+        color: #b2b2b2;
+      }
+
+      .message {
+        display: flex;
+        flex-direction: row;
+        .head-box {
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        .msg-box {
+          position: relative;
+          z-index: 1;
+          flex: 1;
+          margin: 0 10px;
+          span {
+            max-width: 70%;
+            display: inline-block;
+            min-height: 40px;
+            padding: 10px 16px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: greenyellow;
+            box-shadow: 0 1px 2px 0 rgba(153, 153, 153, 0.6);
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: left;
+          }
+        }
+        &.someone-message {
+          .msg-box {
+            &::before {
+              position: absolute;
+              left: -12px;
+              top: 14px;
+              content: "";
+              border: 6px solid transparent;
+              border-right-color: greenyellow;
+            }
+          }
+        }
+        &.myself-message {
+          .msg-box {
+            text-align: right;
+            &::before {
+              position: absolute;
+              right: -12px;
+              top: 14px;
+              content: "";
+              border: 6px solid transparent;
+              border-left-color: greenyellow;
+            }
+          }
+        }
+      }
+
+
     }
     &__input {
       border-top: 1px solid #CCCCCC;

@@ -165,7 +165,60 @@ html {
         height: 100%;
         border-bottom: 1px solid #CCCCCC; }
     .chat-room .chat-panel__context {
-      flex: 1; }
+      flex: 1;
+      padding: 0 20px;
+      overflow-x: hidden;
+      overflow-y: auto; }
+      .chat-room .chat-panel__context .message,
+      .chat-room .chat-panel__context .system-message {
+        padding: 10px 0; }
+      .chat-room .chat-panel__context .system-message {
+        font-size: 12px;
+        text-align: center;
+        color: #b2b2b2; }
+      .chat-room .chat-panel__context .message {
+        display: flex;
+        flex-direction: row; }
+        .chat-room .chat-panel__context .message .head-box {
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          overflow: hidden; }
+          .chat-room .chat-panel__context .message .head-box img {
+            width: 100%; }
+        .chat-room .chat-panel__context .message .msg-box {
+          position: relative;
+          z-index: 1;
+          flex: 1;
+          margin: 0 10px; }
+          .chat-room .chat-panel__context .message .msg-box span {
+            max-width: 70%;
+            display: inline-block;
+            min-height: 40px;
+            padding: 10px 16px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: greenyellow;
+            box-shadow: 0 1px 2px 0 rgba(153, 153, 153, 0.6);
+            word-wrap: break-word;
+            word-break: break-all;
+            text-align: left; }
+        .chat-room .chat-panel__context .message.someone-message .msg-box::before {
+          position: absolute;
+          left: -12px;
+          top: 14px;
+          content: "";
+          border: 6px solid transparent;
+          border-right-color: greenyellow; }
+        .chat-room .chat-panel__context .message.myself-message .msg-box {
+          text-align: right; }
+          .chat-room .chat-panel__context .message.myself-message .msg-box::before {
+            position: absolute;
+            right: -12px;
+            top: 14px;
+            content: "";
+            border: 6px solid transparent;
+            border-left-color: greenyellow; }
     .chat-room .chat-panel__input {
       border-top: 1px solid #CCCCCC;
       height: 180px; }
