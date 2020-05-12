@@ -221,6 +221,29 @@ $side-width: 240px;
     &__input {
       border-top: 1px solid #CCCCCC;
       height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      &__property-group {
+        height: 40px;
+        background-color: pink;
+      }
+      &__keyword-box {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        textarea {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+      &__send-box {
+        height: 40px;
+        background-color: yellow;
+      }
     }
   }
 }
