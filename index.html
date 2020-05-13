@@ -39,7 +39,24 @@
 
     <!-- Chat room -->
     <div class="chat-room">
-      <div class="side-box"></div>
+      <div class="side-box">
+        <div class="myself-box">
+          <div class="myself-box__head">
+            <img src="./images/head-piece-011.jpg" alt="">
+          </div>
+          <div class="myself-box__usernaem">xutongze</div>
+        </div>
+        <ul class="chat-room-list">
+          <li class="room-item">
+            <div class="room__head">
+            <img src="./images/head-piece-011.jpg" alt="">
+            </div>
+            <div class="room__title">menkan room</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- chat list -->
       <div class="chat-panel">
         <div class="chat-panel__title">
           <h4>Chat Room (10)</h4>
@@ -55,8 +72,11 @@
             <div class="head-box">
               <img src="./images/head-piece-009.jpg" alt="">
             </div>
-            <div class="msg-box">
-              <span>this a test message</span>
+            <div class="msg-box--wp">
+              <p>xutongze</p>
+              <div class="msg-box">
+                <span>this a test message</span>
+              </div>
             </div>
           </div>
           <div class="message myself-message">
@@ -109,7 +129,8 @@
           </div>
           <div class="message myself-message">
             <div class="msg-box">
-              <span>this a test messagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessage</span>
+              <span>this a test
+                messagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessage</span>
             </div>
             <div class="head-box">
               <img src="./images/head-piece-010.jpg" alt="">
@@ -117,7 +138,16 @@
           </div>
         </div>
         <div class="chat-panel__input">
-          <div class="chat-panel__input__property-group"></div>
+          <div class="chat-panel__input__property-group">
+            <div class="property-item face">
+              <!-- face -->
+            </div>
+            <div class="property-item screen-cut"></div>
+            <div class="property-item file">
+              <label for="files"></label>
+              <input type="file" name="" id="files" hidden>
+            </div>
+          </div>
           <div class="chat-panel__input__keyword-box">
             <!-- div 属性 contenteditable 可以书写内容-->
             <!-- 如果用表情、图片等内容的话就不能采用textarea标签; 需要用dev[contenteditable]内容 -->

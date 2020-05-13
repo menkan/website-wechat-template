@@ -1,38 +1,134 @@
 // base Color
-$white: #FFFFFF;
+$white: #ffffff;
 $default-text: #555555;
 $shadow: #999999;
-$mainColor: #1AAD19;
+$mainColor: #1aad19;
 
 $dialogue-box: #b2e281;
 
-
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
-body { background:$white; color:$default-text; font-size:14px; font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif; }
-td,th,caption { font-size:14px; }
-h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
-address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
-a { color:$default-text; text-decoration:none; }
-a:hover { text-decoration:underline; }
-img { border:none; }
-ol,ul,li { list-style:none; }
-input, textarea, select, button { font:14px "Arial","Microsoft YaHei","黑体","宋体",sans-serif; outline: none }
-table { border-collapse:collapse; }
-html {overflow-y: scroll;} 
-.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
-.clearfix { *zoom:1; }
-.fl { float:left}
-.fr {float:right}
-.al {text-align:left}
-.ac {text-align:center}
-.ar {text-align:right}
-.hide {display:none}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: $white;
+  color: $default-text;
+  font-size: 14px;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  color: $default-text;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  border: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  font: 14px "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+}
+html {
+  overflow-y: scroll;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.hide {
+  display: none;
+}
 
 /* base root */
 #root {
   font-size: 16px;
   height: 100vh;
-  background: url('../../images/bg.jpg') no-repeat center center;
+  background: url("../../images/bg.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -75,7 +171,7 @@ html {overflow-y: scroll;}
     justify-content: space-between;
     height: 100px;
     margin-bottom: 10px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #eeeeee;
     li {
       width: 40px;
       height: 40px;
@@ -115,7 +211,7 @@ $side-width: 240px;
   max-width: 1000px;
   min-width: 800px;
   margin: 0 auto;
-  background: #EEEEEE;
+  background: #eeeeee;
 
   // sider bar
   .side-box {
@@ -123,7 +219,50 @@ $side-width: 240px;
     width: $side-width;
     float: left;
     height: 100%;
-    background-color: green;
+    background-color: #2e3238;
+    padding: 18px;
+    box-sizing: border-box;
+    .myself-box {
+      display: flex;
+      justify-content: space-between;
+      .myself-box__head {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        box-shadow: 0 1px 2px 0 rgba(153, 153, 153, 0.6);
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .myself-box__usernaem {
+        flex: 1;
+        padding: 10px;
+        font-size: 18px;
+        color: $white;
+      }
+    }
+
+    .chat-room-list {
+      .room-item {
+        display: flex;
+        align-items: center;
+      }
+      .room {
+        &__head {
+          width: 40px;
+          height: 40px;
+          img {
+            width: 100%;
+          }
+        }
+        &__title {
+          padding: 0 10px;
+          color: $white;
+          font-size: 14px;
+        }
+      }
+    }
   }
 
   // chat room context
@@ -141,7 +280,7 @@ $side-width: 240px;
       padding: 0 20px;
       h4 {
         height: 100%;
-        border-bottom: 1px solid #CCCCCC;
+        border-bottom: 1px solid #cccccc;
       }
     }
     &__context {
@@ -159,7 +298,6 @@ $side-width: 240px;
         text-align: center;
         color: #b2b2b2;
       }
-
       .message {
         display: flex;
         flex-direction: row;
@@ -190,16 +328,33 @@ $side-width: 240px;
             word-wrap: break-word;
             word-break: break-all;
             text-align: left;
-          }
-        }
-        &.someone-message {
-          .msg-box {
+
             &::before {
               position: absolute;
               left: -12px;
               top: 14px;
               content: "";
               border: 6px solid transparent;
+            }
+          }
+        }
+        &.someone-message {
+          .msg-box--wp {
+            flex: 1;
+            p {
+              font-size: 12px;
+              color: #4f4f4f;
+              margin: 0 10px;
+              padding-bottom: 4px;
+            }
+          }
+          .msg-box {
+            flex: 0;
+            &::before {
+              position: absolute;
+              left: -12px;
+              top: 14px;
+              content: "";
               border-right-color: $dialogue-box;
             }
           }
@@ -212,26 +367,62 @@ $side-width: 240px;
               right: -12px;
               top: 14px;
               content: "";
-              border: 6px solid transparent;
               border-left-color: $dialogue-box;
             }
           }
         }
       }
     }
-
     &__input {
-      border-top: 1px solid #CCCCCC;
+      border-top: 1px solid #cccccc;
       height: 180px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       &__property-group {
+        padding: 0 10px;
         height: 40px;
-        background-color: pink;
+        display: flex;
+        .property-item {
+          width: 40px;
+          height: 40px;
+          background-color: skyblue;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &.face,
+          &.screen-cut,
+          &.file {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            cursor: pointer;
+          }
+          &.face {
+            background: url("../../images/wechat-sprit.png") no-repeat -404px -398px;
+          }
+          &.screen-cut {
+            background: url("../../images/wechat-sprit.png") no-repeat -30px -432px;
+          }
+          &.file {
+            background: url("../../images/wechat-sprit.png") no-repeat -120px -432px;
+            label {
+              display: block;
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+              background: rgb(255, 255, 255);
+            }
+          }
+        }
       }
       &__keyword-box {
         flex: 1;
+        // div label status
         // overflow-y: auto;
         // overflow-x: hidden;
         overflow: hidden;
@@ -242,6 +433,7 @@ $side-width: 240px;
           border: none;
           padding: 10px;
           box-sizing: border-box;
+          background-color: transparent;
         }
       }
       &__send-box {
@@ -260,7 +452,7 @@ $side-width: 240px;
           display: inline-block;
           border: 1px solid #c1c1c1;
           text-decoration: none;
-          background-color: #FFFFFF;
+          background-color: #ffffff;
           color: #222;
           border-radius: 4px;
           padding: 3px 30px;
