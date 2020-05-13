@@ -120,11 +120,13 @@
           <div class="chat-panel__input__property-group"></div>
           <div class="chat-panel__input__keyword-box">
             <!-- div 属性 contenteditable 可以书写内容-->
-
             <!-- 如果用表情、图片等内容的话就不能采用textarea标签; 需要用dev[contenteditable]内容 -->
-            <textarea></textarea>
+            <textarea id="textarea"></textarea>
           </div>
-          <div class="chat-panel__input__send-box"></div>
+          <div class="chat-panel__input__send-box">
+            <div class="tips">Enter Send Msg</div>
+            <button class="btn">发送</button>
+          </div>
         </div>
       </div>
     </div>
