@@ -1,0 +1,32 @@
+{
+  "name": "website-wechat-template",
+  "version": "0.0.1",
+  "description": "a website wechat template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo 'unkown'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menkan/website-wechat-template.git"
+  },
+  "keywords": [
+    "wechat",
+    "wechat-template",
+    "chat room",
+    "wechat room",
+    "room"
+  ],
+  "author": "menkan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menkan/website-wechat-template/issues"
+  },
+  "homepage": "https://github.com/menkan/website-wechat-template#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  }
+}
